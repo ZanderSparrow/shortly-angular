@@ -24,6 +24,11 @@ angular.module('shortly', [
       templateUrl: 'app/shorten/shorten.html',
       controller: 'ShortenController',
       authenticate: 'valueDoesntMatter'
+    }).
+    otherwise({
+      templateUrl: 'app/links/links.html',
+      controller: 'LinksController',
+      authenticate: 'valueDoesntMatter'
     });
 
     // We add our $httpInterceptor into the array

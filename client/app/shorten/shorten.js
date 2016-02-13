@@ -9,6 +9,7 @@ angular.module('shortly.shorten', [])
     Links.addOne($scope.link)
     .then(function (res) {
       $scope.data.link = res.data;
+      $location.path('/links');
     });
   };
 });

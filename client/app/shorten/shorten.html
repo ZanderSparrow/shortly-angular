@@ -1,7 +1,10 @@
 <div id='container'>
-  <input ng-model="newLink" />
-  <button ng-click="addLink()"> Submit </button>
-  <div class="link">{{ data.link.title }}</div>
+  <form name="EnterUrl">
+    <input ng-model="newLink" ng-minlength=8 type="url" name="url"/>
+    <button ng-click="addLink()"> Submit </button>
+    <p ng-show="EnterUrl.url.$invalid && !EnterUrl.url.pristine && !EnterUrl.url.$error.minlength">Not a valid URL</p>
+    <p ng-show="EnterUrl.url.$error.minlength" >URL is not long enough</p>
+  </form>
 </div>
 
 
