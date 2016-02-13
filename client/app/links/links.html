@@ -1,6 +1,7 @@
 <div id='container'>
   <!-- Your html here -->
-  <div ng-repeat="link in data.links" class="link">
+  Filter: <input ng-model="query" type="text"></input>
+  <div ng-repeat="link in data.links | filter:query | orderBy:'-visits'" class="link">
     <img src="/assets/redirect_icon.png" />
     <div class="info">
       <div class="visits"><span class="count">{{link.visits}}</span> visits</div>
