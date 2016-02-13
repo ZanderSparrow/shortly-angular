@@ -30,7 +30,7 @@ angular.module('shortly.services', [])
 
   return {
     addOne: addOne,
-    getAll: getAll,
+    getAll: getAll
   };
 })
 .factory('Auth', function ($http, $location, $window) {
