@@ -1,7 +1,9 @@
 angular.module('shortly.services', [])
 
 .factory('Links', function ($http) {
-  // Your code here
+
+  var data = {};
+
   var addOne = function (url) {
     return $http({
       method: 'POST',
@@ -9,9 +11,12 @@ angular.module('shortly.services', [])
       data: url
     })
     .then(function (res) {
+      // add the data to a collection here?
+      // return the collection?
       return res;
     });
   };
+
 
   var getAll = function () {
     return $http({
@@ -23,9 +28,14 @@ angular.module('shortly.services', [])
     });
   };
 
+  getAll().then(function (result) {
+    data.links = result;
+  });
+
   return {
     addOne: addOne,
-    getAll: getAll
+    getAll: getAll,
+    data: data
   };
 })
 .factory('Auth', function ($http, $location, $window) {

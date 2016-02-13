@@ -22,7 +22,7 @@ angular.module('shortly', [
     })
     .when('/shorten', {
       templateUrl: 'app/shorten/shorten.html',
-      controller: 'LinksController',
+      controller: 'ShortenController',
       authenticate: 'valueDoesntMatter'
     });
 
