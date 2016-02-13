@@ -1,6 +1,7 @@
 <div id='container'>
   <!-- Your html here -->
-  Filter: <input ng-model="query" type="text"></input>
+  <label for="search">Search: </label>
+  <input ng-model="query" type="text" name="search"></input>
   <div ng-repeat="link in data.links | filter:query | orderBy:'-visits'" class="link">
     <img src="/assets/redirect_icon.png" />
     <div class="info">

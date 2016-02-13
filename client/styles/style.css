@@ -13,6 +13,7 @@ a {
 h1 {
   font-style: italic;
   margin-bottom: 10px;
+  padding: 10px;
 }
 
 .navigation {
@@ -102,7 +103,13 @@ input {
   display: block;
   font-size: 13px;
   padding: 5px;
-  margin-bottom: 5px;
+  margin: 10px;
+  display: inline;
+}
+
+label {
+  display: inline;
+  margin-left: 5px;
 }
 
 input[type=url] {
@@ -137,12 +144,18 @@ input[type=url]:focus {
 
 .creator img.spinner {
   height: 46px;
-  margin-bottom: 5px;
+  margin: 5px;
   padding: 10px;
-  display: none;
+  /*display: none;*/
 }
 
 .creator .message {
   clear: both;
 }
 
+button {
+  width: 7em;
+  height: 2em;
+  font-size: 1em;
+  border-radius: 5px;
+}
