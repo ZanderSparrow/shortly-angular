@@ -2,7 +2,6 @@ angular.module('shortly.services', [])
 
 .factory('Links', function ($http) {
 
-  var data = {};
 
   var addOne = function (url) {
     return $http({
@@ -28,14 +27,10 @@ angular.module('shortly.services', [])
     });
   };
 
-  getAll().then(function (result) {
-    data.links = result;
-  });
 
   return {
     addOne: addOne,
     getAll: getAll,
-    data: data
   };
 })
 .factory('Auth', function ($http, $location, $window) {
