@@ -1,5 +1,15 @@
 <div id='container'>
   <!-- Your html here -->
+  <div class="navigation" ng-controller="AuthController as auth">
+    <ul>
+      <li><a href="/#/links" class="selected">Links</a></li>
+      <li><a href="/#/shorten">Shorten</a></li>
+    </ul>
+    <ul class="logout">
+      <li><a href="" ng-click="signout()">Log Out</a></li>
+    </ul>  
+  </div>
+
   <label for="search">Search: </label>
   <input ng-model="query" type="text" name="search"></input>
   <div ng-repeat="link in data.links | filter:query | orderBy:'-visits'" class="link">

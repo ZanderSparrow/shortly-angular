@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <title>Shortly</title>
+    <link href='https://fonts.googleapis.com/css?family=Amatic+SC:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="styles/style.css" />
     <link rel="shortcut icon" href="" type="image/x-icon">
 
@@ -11,17 +12,7 @@
     <h1>Shortly</h1>
 
     <!-- the ng-view directive is where our templates will be loaded into when naviagted to -->
-    <div class="navigation" ng-controller="AuthController as auth">
-      <div ng-show="user">
-        <ul>
-          <li><a href="/#/links">Links</a></li>
-          <li><a href="/#/shorten">Shorten</a></li>
-        </ul>
-        <ul class="logout">
-          <li><a href="" ng-click="signout()">Log Out</a></li>
-        </ul>  
-      </div>
-    </div>
+    <hr>
     <div ng-view></div>
 
     <script src="lib/angular/angular.js"></script>

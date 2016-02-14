@@ -1,4 +1,14 @@
 <div id='container'>
+
+  <div class="navigation" ng-controller="AuthController as auth">
+    <ul>
+      <li><a href="/#/links" >Links</a></li>
+      <li><a href="/#/shorten" class="selected">Shorten</a></li>
+    </ul>
+    <ul class="logout">
+      <li><a href="" ng-click="signout()">Log Out</a></li>
+    </ul>  
+  </div>
   <form name="EnterUrl">
     <input ng-model="newLink" ng-minlength=8 type="url" name="url" placeholder="Enter a url..."/>
     <button ng-click="EnterUrl.$valid && addLink()" type="submit"> Submit </button>

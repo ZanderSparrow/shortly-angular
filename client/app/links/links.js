@@ -8,8 +8,7 @@ angular.module('shortly.links', [])
   .then(function (res) {
     $scope.data.links = res;
   })
-  .catch(function(error) {
+  .catch(function (error) {
     console.error(error);
   });
-
 });
