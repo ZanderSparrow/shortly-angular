@@ -19,17 +19,15 @@ angular.module('shortly', [
     .when('/links', {
       templateUrl: 'app/links/links.html',
       controller: 'LinksController',
-      authenticate: 'valueDoesntMatter'
+      authenticate: true
     })
     .when('/shorten', {
       templateUrl: 'app/shorten/shorten.html',
       controller: 'ShortenController',
-      authenticate: 'valueDoesntMatter'
-    }).
-    otherwise({
-      templateUrl: 'app/links/links.html',
-      controller: 'LinksController',
-      authenticate: 'valueDoesntMatter'
+      authenticate: true
+    })
+    .otherwise({
+      redirectTo: '/links'
     });
 
     // We add our $httpInterceptor into the array

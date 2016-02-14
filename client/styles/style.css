@@ -49,6 +49,10 @@ h1 {
   background-color: #ccc;
 }
 
+.navigation .logout li {
+  float: right;
+}
+
 #container {
   clear: both;
   margin-top: 10px;

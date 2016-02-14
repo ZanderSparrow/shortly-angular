@@ -10,8 +10,6 @@ angular.module('shortly.services', [])
       data: url
     })
     .then(function (res) {
-      // add the data to a collection here?
-      // return the collection?
       return res;
     });
   };
